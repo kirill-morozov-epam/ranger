@@ -237,7 +237,7 @@
                 <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-                <module>kms</module>
+<!--                <module>kms</module>-->
                 <module>hbase-agent</module>
                 <module>hdfs-agent</module>
                 <module>hive-agent</module>
@@ -245,7 +245,7 @@
                 <module>storm-agent</module>
                 <module>plugin-yarn</module>
                 <module>plugin-ozone</module>
-                <module>security-admin</module>
+<!--                <module>security-admin</module>-->
                 <module>plugin-kafka</module>
                 <module>plugin-solr</module>
                 <module>plugin-nifi</module>
@@ -947,95 +947,95 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>${maven.pmd.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <rulesets>
-                        <ruleset>${project.parent.basedir}/dev-support/ranger-pmd-ruleset.xml</ruleset>
-                    </rulesets>
-                    <sourceEncoding>UTF-8</sourceEncoding>
-                    <failOnViolation>true</failOnViolation>
-                    <linkXRef>false</linkXRef>
-                    <includeTests>true</includeTests>
-                    <verbose>true</verbose>
-                    <excludeRoots>
-                        <excludeRoot>${basedir}/src/main/generated</excludeRoot>
-                    </excludeRoots>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <version>0.11</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <excludeSubProjects>false</excludeSubProjects>
-                    <excludes>
-                        <exclude>**/dependency-reduced-pom.xml</exclude>
-                        <exclude>**/robots.txt</exclude>
-                        <exclude>**/MANIFEST.MF</exclude>
-                        <exclude>**/bootstrap.min.js</exclude>
-                        <exclude>**/src/main/webapp/fonts/**</exclude>
-                        <exclude>**/src/main/webapp/libs/**</exclude>
-                        <exclude>.git/**</exclude>
-                        <exclude>.pc/**</exclude>
-                        <exclude>debian/**</exclude>
-                        <exclude>.gitignore/**</exclude>
-                        <exclude>.svn/**</exclude>
-                        <exclude>.idea/**</exclude>
-                        <exclude>dev-support/**</exclude>
-                        <exclude>**/.gitignore/**</exclude>
-                        <exclude>**/.project/**</exclude>
-                        <exclude>**/.settings/**</exclude>
-                        <exclude>**/.classpath/**</exclude>
-                        <exclude>**/*.iml</exclude>
-                        <exclude>**/target/**</exclude>
-                        <exclude>*CHANGES*</exclude>
-                        <exclude>**/ISSUES</exclude>
-                        <exclude>**/patchprocess/**</exclude>
-                        <exclude>**/test/resources/**/*.json</exclude>
-                        <exclude>**/test/resources/**/*.txt</exclude>
-                        <exclude>**/test/resources/**/*.csv</exclude>
-                        <exclude>**/test/resources/**/*.yaml</exclude>
-                        <exclude>**/test/resources/**/*.avcs</exclude>
-                        <exclude>**/main/resources/**/*.json</exclude>
-                        <exclude>**/samples/**/*.json</exclude>
-                        <exclude>**/.externalToolBuilders/*</exclude>
-                        <exclude>*.patch</exclude>
-                        <exclude>**/testdata/*.json</exclude>
-                        <exclude>atlassian-ide-plugin.xml</exclude>
-                        <exclude>**/.pydevproject</exclude>
-                        <exclude>**/derby.log</exclude>
-                        <exclude>**/*.jaas</exclude>
-                        <exclude>**/target/apidocs/**</exclude>
-                        <exclude>**/target/kms/apidocs/**</exclude>
-                        <exclude>**/importPolicy/*.json</exclude>
-                        <exclude>**/node/**</exclude>
-                        <exclude>**/node_modules/**</exclude>
-                        <exclude>**/package.json</exclude>
-                        <exclude>**/package-lock.json</exclude>
-                        <exclude>**/ranger_es_schema.json</exclude>
-                        <exclude>**/venv/**</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-pmd-plugin</artifactId>-->
+<!--                <version>${maven.pmd.plugin.version}</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <rulesets>-->
+<!--                        <ruleset>${project.parent.basedir}/dev-support/ranger-pmd-ruleset.xml</ruleset>-->
+<!--                    </rulesets>-->
+<!--                    <sourceEncoding>UTF-8</sourceEncoding>-->
+<!--                    <failOnViolation>true</failOnViolation>-->
+<!--                    <linkXRef>false</linkXRef>-->
+<!--                    <includeTests>true</includeTests>-->
+<!--                    <verbose>true</verbose>-->
+<!--                    <excludeRoots>-->
+<!--                        <excludeRoot>${basedir}/src/main/generated</excludeRoot>-->
+<!--                    </excludeRoots>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.rat</groupId>-->
+<!--                <artifactId>apache-rat-plugin</artifactId>-->
+<!--                <version>0.11</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <excludeSubProjects>false</excludeSubProjects>-->
+<!--                    <excludes>-->
+<!--                        <exclude>**/dependency-reduced-pom.xml</exclude>-->
+<!--                        <exclude>**/robots.txt</exclude>-->
+<!--                        <exclude>**/MANIFEST.MF</exclude>-->
+<!--                        <exclude>**/bootstrap.min.js</exclude>-->
+<!--                        <exclude>**/src/main/webapp/fonts/**</exclude>-->
+<!--                        <exclude>**/src/main/webapp/libs/**</exclude>-->
+<!--                        <exclude>.git/**</exclude>-->
+<!--                        <exclude>.pc/**</exclude>-->
+<!--                        <exclude>debian/**</exclude>-->
+<!--                        <exclude>.gitignore/**</exclude>-->
+<!--                        <exclude>.svn/**</exclude>-->
+<!--                        <exclude>.idea/**</exclude>-->
+<!--                        <exclude>dev-support/**</exclude>-->
+<!--                        <exclude>**/.gitignore/**</exclude>-->
+<!--                        <exclude>**/.project/**</exclude>-->
+<!--                        <exclude>**/.settings/**</exclude>-->
+<!--                        <exclude>**/.classpath/**</exclude>-->
+<!--                        <exclude>**/*.iml</exclude>-->
+<!--                        <exclude>**/target/**</exclude>-->
+<!--                        <exclude>*CHANGES*</exclude>-->
+<!--                        <exclude>**/ISSUES</exclude>-->
+<!--                        <exclude>**/patchprocess/**</exclude>-->
+<!--                        <exclude>**/test/resources/**/*.json</exclude>-->
+<!--                        <exclude>**/test/resources/**/*.txt</exclude>-->
+<!--                        <exclude>**/test/resources/**/*.csv</exclude>-->
+<!--                        <exclude>**/test/resources/**/*.yaml</exclude>-->
+<!--                        <exclude>**/test/resources/**/*.avcs</exclude>-->
+<!--                        <exclude>**/main/resources/**/*.json</exclude>-->
+<!--                        <exclude>**/samples/**/*.json</exclude>-->
+<!--                        <exclude>**/.externalToolBuilders/*</exclude>-->
+<!--                        <exclude>*.patch</exclude>-->
+<!--                        <exclude>**/testdata/*.json</exclude>-->
+<!--                        <exclude>atlassian-ide-plugin.xml</exclude>-->
+<!--                        <exclude>**/.pydevproject</exclude>-->
+<!--                        <exclude>**/derby.log</exclude>-->
+<!--                        <exclude>**/*.jaas</exclude>-->
+<!--                        <exclude>**/target/apidocs/**</exclude>-->
+<!--                        <exclude>**/target/kms/apidocs/**</exclude>-->
+<!--                        <exclude>**/importPolicy/*.json</exclude>-->
+<!--                        <exclude>**/node/**</exclude>-->
+<!--                        <exclude>**/node_modules/**</exclude>-->
+<!--                        <exclude>**/package.json</exclude>-->
+<!--                        <exclude>**/package-lock.json</exclude>-->
+<!--                        <exclude>**/ranger_es_schema.json</exclude>-->
+<!--                        <exclude>**/venv/**</exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
