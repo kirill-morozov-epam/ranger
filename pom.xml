@@ -513,6 +513,7 @@
                 <module>ranger-util</module>
                 <module>plugin-presto</module>
                 <module>ranger-presto-plugin-shim</module>
+                <module>distro</module>
             </modules>
         </profile>
         <profile>
