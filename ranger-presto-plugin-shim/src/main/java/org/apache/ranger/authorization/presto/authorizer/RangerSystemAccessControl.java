@@ -390,17 +390,18 @@ public class RangerSystemAccessControl
     }
   }
 
-//  @Override
-//  public List<ColumnMetadata> filterColumns(SystemSecurityContext context, CatalogSchemaTableName table, List<ColumnMetadata> columns) {
-//    List<ColumnMetadata> filteredColumns;
-//    try {
-//      activatePluginClassLoader();
-//      filteredColumns = systemAccessControlImpl.filterColumns(context, table, columns);
-//    } finally {
-//      deactivatePluginClassLoader();
-//    }
-//    return filteredColumns;
-//  }
+
+  @Override
+  public Set<String> filterColumns(SystemSecurityContext context, CatalogSchemaTableName table, Set<String> columns) {
+    Set<String> filteredColumns;
+    try {
+      activatePluginClassLoader();
+      filteredColumns = systemAccessControlImpl.filterColumns(context, table, columns);
+    } finally {
+      deactivatePluginClassLoader();
+    }
+    return filteredColumns;
+  }
 
   @Override
   public void checkCanRenameView(SystemSecurityContext context, CatalogSchemaTableName view, CatalogSchemaTableName newView) {

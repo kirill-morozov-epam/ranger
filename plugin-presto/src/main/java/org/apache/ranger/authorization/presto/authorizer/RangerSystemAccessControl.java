@@ -573,10 +573,11 @@ public class RangerSystemAccessControl
   /**
    * This is a NOOP, no filtering is applied
    */
-//  @Override
-//  public List<ColumnMetadata> filterColumns(SystemSecurityContext context, CatalogSchemaTableName table, List<ColumnMetadata> columns) {
-//    return columns;
-//  }
+  @Override
+  public Set<String> filterColumns(SystemSecurityContext context, CatalogSchemaTableName table, Set<String> columns) {
+    return columns;
+  }
+
 
   /** QUERY **/
 
